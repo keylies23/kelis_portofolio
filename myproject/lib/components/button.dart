@@ -4,18 +4,18 @@ import 'package:myproject/pages/menu.dart';
 
 class MyButton extends StatelessWidget {
   final String namatombol;
+  final Function()? onTap;
+
   const MyButton({
     super.key,
     required this.namatombol,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (((context) => MainMenu()))));
-      },
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Container(
