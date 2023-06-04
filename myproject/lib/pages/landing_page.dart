@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myproject/components/button.dart';
+import 'package:myproject/pages/menu.dart';
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});
+  const LandingPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,7 @@ class LandingPage extends StatelessWidget {
             //button
             MyButton(
               namatombol: 'Let\'s Go!',
+              onTap: () {},
             ),
           ])),
     );
